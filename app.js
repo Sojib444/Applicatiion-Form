@@ -13,7 +13,9 @@ app.use(express.json())
 app.use(express.urlencoded({extended:false}))
 const tamplatePath=path.join(__dirname,"../Registration form/templates/views")
 const partialPath=path.join(__dirname,"../Registration form/templates/partials")
-app.set("view engine","hbs")
+// app.set("view engine","hbs")
+app.set('view engine', 'html');
+app.engine('html', require('hbs').__express);
 app.set("views",tamplatePath)  
 hbs.registerPartials(partialPath);
 app.get("/",(req,res)=>
@@ -47,7 +49,7 @@ app.post("/register",async(req,res)=>
             }else
             {
                 res.send("Pssword Not matching")
-            }
+            } 
 
 
 

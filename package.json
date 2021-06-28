@@ -11,9 +11,11 @@
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^5.0.2",
+    "consolidate": "^0.16.0",
     "express": "^4.17.1",
     "hbs": "^4.1.2",
     "mongoose": "^5.12.14",
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.7",
+    "swig": "^1.4.2"
   }
 }
